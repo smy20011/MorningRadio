@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>{{ podcast_title }}</title>
+</head>
+
+<body>
+  <h1>{{ podcast_title }}</h1>
+  <p>{{ podcast_description }}</p>
+
+  <h2>Episodes</h2>
+  <ul>
+    {% for episode in episodes %}
+    <li><a href="/assets/{{ episode.filename }}">{{ episode.title }}</a></li>
+    {% endfor %}
+  </ul>
+  <a href="/rss">RSS Feed</a>
+</body>
+
+</html>
