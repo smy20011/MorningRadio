@@ -8,3 +8,10 @@ wheels/
 
 # Virtual environments
 .venv
+
+# Asset files
+assets/*.mp3
+assets/*.md
+assets/*.txt
+
+.cache.sqlite
