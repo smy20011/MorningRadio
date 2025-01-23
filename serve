@@ -5,4 +5,4 @@
 python schedule_gen.py &
 GENPID=$!
 trap "kill $GENPID; exit" SIGINT SIGTERM
-python -m http.server -b 0.0.0.0 --directory assets
+flask run --host 0.0.0.0
