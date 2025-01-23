@@ -902,6 +902,20 @@ wheels = [
 ]
 
 [[package]]
+name = "llm-openrouter"
+version = "0.3"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "httpx" },
+    { name = "llm" },
+    { name = "openai" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/b1/9f/fecf6ab97e13f32d30c7975310a41901265ba89473ab820a9300ed3d69fc/llm_openrouter-0.3.tar.gz", hash = "sha256:ce704084087ed3c8f8716e212b741e95f70cce2dce2530b65d7ddba38c160dcd", size = 8349 }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/6c/4b/7c99ab4cec14664ffadc5db2033642b76b0e4e46ab80909b19119df69541/llm_openrouter-0.3-py3-none-any.whl", hash = "sha256:db07553020fae28c0b981f4fe2b16922df48d7034443c614d4a30fd7e0c2c5c8", size = 7970 },
+]
+
+[[package]]
 name = "lxml"
 version = "5.3.0"
 source = { registry = "https://pypi.org/simple" }
@@ -985,6 +999,7 @@ dependencies = [
     { name = "jinja2" },
     { name = "jupyter" },
     { name = "llm" },
+    { name = "llm-openrouter" },
     { name = "numpy" },
     { name = "openmeteo-requests" },
     { name = "pandas" },
@@ -1002,6 +1017,7 @@ requires-dist = [
     { name = "jinja2", specifier = ">=3.1.5" },
     { name = "jupyter", specifier = ">=1.1.1" },
     { name = "llm", specifier = ">=0.19.1" },
+    { name = "llm-openrouter", specifier = ">=0.3" },
     { name = "numpy", specifier = ">=2.2.2" },
     { name = "openmeteo-requests", specifier = ">=1.3.0" },
     { name = "pandas", specifier = ">=2.2.3" },

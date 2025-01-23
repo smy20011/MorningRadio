@@ -9,6 +9,7 @@ dependencies = [
     "feedgen>=1.0.0",
     "jinja2>=3.1.5",
     "jupyter>=1.1.1",
+    "llm-openrouter>=0.3",
     "llm>=0.19.1",
     "numpy>=2.2.2",
     "openmeteo-requests>=1.3.0",
