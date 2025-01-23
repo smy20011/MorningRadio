@@ -7,7 +7,7 @@ requires-python = ">=3.13"
 dependencies = [
     "edge-tts>=7.0.0",
     "feedgen>=1.0.0",
-    "flask>=3.1.0",
+    "jinja2>=3.1.5",
     "jupyter>=1.1.1",
     "llm>=0.19.1",
     "numpy>=2.2.2",
@@ -16,6 +16,6 @@ dependencies = [
     "quarto-cli>=1.6.40",
     "requests-cache>=1.2.1",
     "retry-requests>=2.0.0",
-    "tzlocal>=5.2",
+    "schedule>=1.2.2",
     "yfinance>=0.2.52",
 ]

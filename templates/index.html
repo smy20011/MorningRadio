@@ -12,10 +12,13 @@
   <h2>Episodes</h2>
   <ul>
     {% for episode in episodes %}
-    <li><a href="/assets/{{ episode.filename }}">{{ episode.title }}</a></li>
+    <li>
+      <a href="{{ episode.filename }}">{{ episode.filename }}</a>
+      <a href="{{ episode.text }}">{{ episode.text }}</a>
+    </li>
     {% endfor %}
   </ul>
-  <a href="/rss">RSS Feed</a>
+  <a href="rss.xml">RSS Feed</a>
 </body>
 
 </html>
