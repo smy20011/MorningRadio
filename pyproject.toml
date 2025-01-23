@@ -20,4 +20,5 @@ dependencies = [
     "schedule>=1.2.2",
     "yfinance>=0.2.52",
     "flask>=3.1.0",
+    "gunicorn>=23.0.0",
 ]
