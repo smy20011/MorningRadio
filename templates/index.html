@@ -13,8 +13,9 @@
   <ul>
     {% for episode in episodes %}
     <li>
-      <a href="{{ episode.filename }}">{{ episode.filename }}</a>
-      <a href="{{ episode.text }}">{{ episode.text }}</a>
+      <span> {{ episode.filename }}</span>
+      <span><a href="{{ episode.filename }}">Audio</a></span>
+      <span><a href="{{ episode.text }}">Text</a></span>
     </li>
     {% endfor %}
   </ul>

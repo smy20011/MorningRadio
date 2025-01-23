@@ -21,7 +21,7 @@ $(TEXT_FILE): $(MD_FILE)
 $(AUDIO_FILE): $(TEXT_FILE)
 	edge-tts --file $(TEXT_FILE) --write-media $(AUDIO_FILE)
 
-$(HOME_PAGE) $(FEED): $(AUDIO_FILE) $(TEXT_FILE) $(MD_FILE)
+$(HOME_PAGE) $(FEED): $(AUDIO_FILE) $(TEXT_FILE) $(MD_FILE) templates/index.html gen_rss.py
 	python gen_rss.py
 
 serve: $(HOME_PAGE) $(FEED)
