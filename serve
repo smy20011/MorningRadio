@@ -5,4 +5,4 @@
 python schedule_gen.py &
 GENPID=$!
 trap "kill $GENPID; exit" SIGINT SIGTERM
-flask run --host 0.0.0.0
+gunicorn --bind 0.0.0.0:5000 app:app
