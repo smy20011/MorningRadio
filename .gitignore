@@ -10,8 +10,7 @@ wheels/
 .venv
 
 # Asset files
-assets/*.mp3
-assets/*.md
-assets/*.txt
+assets/*
+!assets/.gitkeep
 
 .cache.sqlite
