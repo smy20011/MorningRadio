@@ -13,4 +13,8 @@ wheels/
 assets/*
 !assets/.gitkeep
 
+# Model files
+models/
+!models/.gitkeep
+
 .cache.sqlite
