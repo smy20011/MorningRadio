@@ -1,7 +1,8 @@
 OUTPUT_DIR=assets
-MODEL=models/Llama-3.2-3B-Instruct-Q6_K.gguf
+MODEL=models/qwen2.5-3b-instruct-q6_k.gguf
 
-AUDIO_MODELS=models/qwen2.5-3b-instruct-q6_k.gguf
+AUDIO_MODEL=models/kokoro-v0_19.onnx
+VOICE=models/voices.bin
 DATE=$(shell date -I)
 AUDIO_FILE=$(OUTPUT_DIR)/$(DATE).mp3
 TEXT_FILE=$(OUTPUT_DIR)/$(DATE).txt
@@ -17,8 +18,10 @@ all: $(AUDIO_FILE) $(MD_FILE) $(TEXT_FILE)
 $(MODEL):
 	wget "https://huggingface.co/Qwen/Qwen2.5-3B-Instruct-GGUF/resolve/main/$(notdir $(MODEL))" -O $(MODEL)
 
-$(AUDIO_MODELS):
+$(AUDIO_MODEL):
 	wget https://github.com/thewh1teagle/kokoro-onnx/releases/download/model-files/kokoro-v0_19.onnx -P models
+
+$(VOICE):
 	wget https://github.com/thewh1teagle/kokoro-onnx/releases/download/model-files/voices.bin -P models
 
 $(MD_FILE): $(SOURCE_FILE)
@@ -27,7 +30,7 @@ $(MD_FILE): $(SOURCE_FILE)
 $(TEXT_FILE): $(MD_FILE) $(MODEL)
 	python llm.py --model $(MODEL) --input $(MD_FILE) --output $(TEXT_FILE)
 
-$(AUDIO_FILE): $(TEXT_FILE) $(AUDIO_MODELS)
+$(AUDIO_FILE): $(TEXT_FILE) $(AUDIO_MODEL) $(VOICE)
 	python tts.py --input $(TEXT_FILE) --output $(AUDIO_FILE)
 
 serve: all
