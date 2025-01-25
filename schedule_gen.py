@@ -2,8 +2,10 @@ import schedule
 import time
 import os
 
+
 def make():
     os.system("make")
+
 
 schedule.every().day.at("07:30").do(make)
 

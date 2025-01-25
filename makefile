@@ -1,25 +1,34 @@
 OUTPUT_DIR=assets
+MODEL=models/Llama-3.2-3B-Instruct-Q6_K.gguf
+
+AUDIO_MODELS=models/kokoro-v0_19.onnx models/voices.bin
 DATE=$(shell date -I)
 AUDIO_FILE=$(OUTPUT_DIR)/$(DATE).mp3
 TEXT_FILE=$(OUTPUT_DIR)/$(DATE).txt
 MD_FILE=$(OUTPUT_DIR)/$(DATE).md
 HOME_PAGE=$(OUTPUT_DIR)/index.html
 FEED=$(OUTPUT_DIR)/rss.xml
-MODEL=openrouter/google/gemini-flash-1.5
 SOURCE_FILE=Morning.ipynb
 
-all: $(HOME_PAGE) $(FEED)
+all: $(AUDIO_FILE) $(MD_FILE) $(TEXT_FILE)
 
 .PHONY: serve
+
+$(MODEL):
+	wget "https://huggingface.co/bartowski/Llama-3.2-3B-Instruct-GGUF/resolve/main/$(notdir $(MODEL))" -O $(MODEL)
+
+$(AUDIO_MODELS):
+	wget https://github.com/thewh1teagle/kokoro-onnx/releases/download/model-files/kokoro-v0_19.onnx -P models
+	wget https://github.com/thewh1teagle/kokoro-onnx/releases/download/model-files/voices.bin -P models
 
 $(MD_FILE): $(SOURCE_FILE)
 	quarto render $(SOURCE_FILE) --to md --execute --output - > $(MD_FILE)
 
-$(TEXT_FILE): $(MD_FILE)
-	cat $(MD_FILE) | llm -m $(MODEL) > $(TEXT_FILE)
+$(TEXT_FILE): $(MD_FILE) $(MODEL)
+	python llm.py --model $(MODEL) --input $(MD_FILE) --output $(TEXT_FILE)
 
-$(AUDIO_FILE): $(TEXT_FILE)
-	edge-tts --file $(TEXT_FILE) --write-media $(AUDIO_FILE)
+$(AUDIO_FILE): $(TEXT_FILE) $(AUDIO_MODELS)
+	python tts.py --input $(TEXT_FILE) --output $(AUDIO_FILE)
 
-serve: $(HOME_PAGE) $(FEED)
+serve: all
 	./serve
