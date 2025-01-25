@@ -24,9 +24,6 @@ dependencies = [
     "llvmlite>=0.44.0",
     "pydub>=0.25.1",
     "audioop-lts>=0.2.1",
-    "kokoro-onnx",
     "soundfile>=0.13.0",
+    "kokoro-onnx==0.3.6",
 ]
-
-[tool.uv.sources]
-kokoro-onnx = { git = "https://github.com/thewh1teagle/kokoro-onnx" }

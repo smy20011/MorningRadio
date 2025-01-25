@@ -1101,7 +1101,7 @@ wheels = [
 [[package]]
 name = "kokoro-onnx"
 version = "0.3.6"
-source = { git = "https://github.com/thewh1teagle/kokoro-onnx#57f8393345c05e9ba08572db8ed5d04ee0e1f7da" }
+source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "colorlog" },
     { name = "espeakng-loader" },
@@ -1110,6 +1110,10 @@ dependencies = [
     { name = "numpy" },
     { name = "onnxruntime" },
     { name = "phonemizer-fork" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/dd/ac/6f59e07ac47ee8e35774d5fdacbd2e1b83ab727f201bb5f39789e71b2ca0/kokoro_onnx-0.3.6.tar.gz", hash = "sha256:e3c98ac80cf94452d40089d5ad9ba2eebee48187e806d6128d55add1914a7576", size = 85213 }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/ea/50/e5db468119fdc4660e52a1085ecd762601ab928585effadc1bc9106b5df8/kokoro_onnx-0.3.6-py3-none-any.whl", hash = "sha256:07e26f81fc9bae1c41a79e070d71e7f919b85fe320756328cd60d43edb3f2e27", size = 10106 },
 ]
 
 [[package]]
@@ -1340,7 +1344,7 @@ requires-dist = [
     { name = "gunicorn", specifier = ">=23.0.0" },
     { name = "jinja2", specifier = ">=3.1.5" },
     { name = "jupyter", specifier = ">=1.1.1" },
-    { name = "kokoro-onnx", git = "https://github.com/thewh1teagle/kokoro-onnx" },
+    { name = "kokoro-onnx", specifier = "==0.3.6" },
     { name = "llama-cpp-python", specifier = ">=0.3.6" },
     { name = "llm", specifier = ">=0.19.1" },
     { name = "llm-openrouter", specifier = ">=0.3" },
