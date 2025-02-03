@@ -2,6 +2,12 @@
 
 Morning Radio is a set of Python scripts that allows you to generate a personalized broadcast for your morning commute. You write a script using a Jupyter Notebook, and it uses a local LLM to generate the script and a local TTS system to synthesize it into audio.
 
+Example of Generated Broadcast
+
+
+https://github.com/user-attachments/assets/c3773cb2-2044-4517-b508-3af968b8dfd3
+
+
 ## Highlights
 
 - 📻 Personalized morning broadcasts tailored to your interests and routines.
