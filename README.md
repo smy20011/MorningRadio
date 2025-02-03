@@ -27,7 +27,7 @@ Before running the script, make sure you have GCC and Make installed on your sys
 uv run make serve
 ```
 
-UV will install the packages, create the virtual environment, and run the command within the virtual environment. The script will download the model files and start generation. After generation is finished, a server will be running at localhost:5000 with a list of generated podcasts.
+UV will install the packages, create the virtual environment, and run the command within the virtual environment. The script will download the model files and start generation. After generation is finished, a server will be running at http://localhost:5000 with a list of generated podcasts.
 
 ### Run with Virtual Environment
 
