@@ -3,7 +3,6 @@ from flask import Flask, render_template, Response, request, send_from_directory
 import glob
 import os
 import datetime
-import jinja2
 
 PODCAST_TITLE = "Morning Routine"
 PODCAST_DESCRIPTION = "Programmatically Generated Podcast"
