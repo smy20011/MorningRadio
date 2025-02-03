@@ -2,7 +2,12 @@
 
 Morning Radio is a set of Python scripts that allows you to generate a personalized broadcast for your morning commute. You write a script using a Jupyter Notebook, and it uses a local LLM to generate the script and a local TTS system to synthesize it into audio.
 
-It also ships with a podcast server and a scheduling system that automatically creates the podcast at 7:30 AM your local time.
+## Highlights
+
+- 📻 Personalized morning broadcasts tailored to your interests and routines.
+- 🧠 Fully local, totoal private.
+- ⏰ Includes a scheduling system that automatically generates and publishes the podcast at a specified time 
+- 🎙️ Comes with a built-in podcast server for easy access to generated broadcasts.
 
 ## How to Run
 
@@ -69,3 +74,11 @@ To change model parameters, you can change `llm.py`. I use the `llama_cpp` Pytho
 ### Customize Audio Generation
 
 I use Kokoro to convert text to audio. To customize the voice or speed, change `tts.py` to fit your needs.
+
+### Customize Time of the Generation
+
+You can change the `schedule_gen.py` to change the time of generation. It's a simple script that call the `make` command.
+
+```python
+schedule.every().day.at("07:30").do(make)
+```
