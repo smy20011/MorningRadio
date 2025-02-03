@@ -5,7 +5,7 @@ Morning Radio is a set of Python scripts that allows you to generate a personali
 ## Highlights
 
 - 📻 Personalized morning broadcasts tailored to your interests and routines.
-- 🧠 Fully local, totoal private.
+- 🧠 Fully local, totally private.
 - ⏰ Includes a scheduling system that automatically generates and publishes the podcast at a specified time 
 - 🎙️ Comes with a built-in podcast server for easy access to generated broadcasts.
 
