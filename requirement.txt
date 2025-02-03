@@ -1,6 +1,3 @@
-aiohappyeyeballs==2.4.4
-aiohttp==3.11.11
-aiosignal==1.3.2
 annotated-types==0.7.0
 anyio==4.8.0
 argon2-cffi==23.1.0
@@ -33,7 +30,6 @@ defusedxml==0.7.1
 diskcache==5.6.3
 distro==1.9.0
 dlinfo==2.0.0
-edge-tts==7.0.0
 espeakng-loader==0.2.4
 executing==2.1.0
 fastjsonschema==2.21.1
@@ -42,7 +38,6 @@ flask==3.1.0
 flatbuffers==24.3.25
 fqdn==1.5.1
 frozendict==2.4.6
-frozenlist==1.5.0
 gunicorn==23.0.0
 h11==0.14.0
 html5lib==1.1
@@ -91,7 +86,6 @@ matplotlib-inline==0.1.7
 mistune==3.1.0
 mpmath==1.3.0
 msgpack==1.1.0
-multidict==6.1.0
 multitasking==0.0.11
 nbclient==0.10.2
 nbconvert==7.16.5
@@ -119,7 +113,6 @@ pluggy==1.5.0
 pooch==1.8.2
 prometheus-client==0.21.1
 prompt-toolkit==3.0.50
-propcache==0.2.1
 protobuf==5.29.3
 psutil==6.1.1
 ptyprocess==0.7.0
@@ -163,7 +156,6 @@ soxr==0.5.0.post1
 sqlite-fts4==1.0.3
 sqlite-migrate==0.1b0
 sqlite-utils==3.38
-srt==3.5.3
 stack-data==0.6.3
 sympy==1.13.3
 tabulate==0.9.0
@@ -187,5 +179,4 @@ websocket-client==1.8.0
 werkzeug==3.1.3
 wheel==0.45.1
 widgetsnbextension==4.0.13
-yarl==1.18.3
 yfinance==0.2.52
