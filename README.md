@@ -19,6 +19,13 @@ https://github.com/user-attachments/assets/c3773cb2-2044-4517-b508-3af968b8dfd3
 
 Before running the script, make sure you have GCC and Make installed on your system.
 
+### Step 0: Clone the repo
+
+```bash
+git clone https://github.com/smy20011/MorningRadio
+cd MorningRadio
+```
+
 ### Run with UV
 
 [UV](https://github.com/astral-sh/uv) is recommended for running the system. It makes package installation much easier. To run the entire system (including the podcast server), use:
